@@ -13,6 +13,9 @@ app.use(express.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 
 app.use("/posts", postRoutes);
+app.get("/",(req,res)=>{
+  res.send("Hello from backend");
+});
 app.use("/user", userRouter);
 
 //const CONNECTION_URL = "mongodb+srv://js_mastery:M6WfDnJEoj9HkV2d@practice.jto9p.mongodb.net/memories_app?retryWrites=true&w=majority";
